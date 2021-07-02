@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/ba33ab971e.js"></script>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/search_page.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<title>NT114-Search</title>
+<script type="text/javascript">
+ 
+	$(function() {
+	  $(".search_button").click(function() {
+		var search_word = $("#search_box").val();
+		var dataString = 'search_word='+ search_word;
+		var dataString_1 = 'search='+ search_word;
+		  if(search_word==''){}
+		  else
+		  {
+			$.ajax({
+			  type: "POST",
+			  url: "/searchdata",
+			  data: dataString,
+			  beforeSend: function(html) {
+				  document.getElementById("insert_search").innerHTML = ''; 
+				  $("#flash").show();
+				  $("#searchword").show();
+				  $(".loader").show();
+				  $(".searchword").html(search_word);
+				  $("#flash").html('Loading Results...');
+				},
+			  success: function(html){	
+					$(".loader").hide();		  
+					$("#insert_search").append(html.data);
+					var pageNumber = 1;
+					var numsPage = $( "li" ).length;
+					numsPage_1=Math.floor(numsPage/10);
+					showPage(pageNumber);
+					if(numsPage < 11){
+						$('#prev').hide();
+						$('#next').hide();
+					}
+					else if(numsPage > 10){
+						if(pageNumber==1){$('#next').show();}
+						else if(pageNumber==numsPage_1){$('#prev').show();}
+					}
+				  	$("#flash").hide();
+				  history.replaceState(null, null, "?"+dataString_1.toString());
+			  }
+			});
+		  }
+		return false;
+	  });
+	});
+	$(document).ready(function () {
+		var numsPage = $( "li" ).length;
+		if (numsPage/10 == Math.floor(numsPage/10)) numsPage=Math.floor(numsPage/10);
+		else numsPage=Math.floor(numsPage/10)+1;
+		numsPage = Math.floor(numsPage/10) + 1;
+		var pageNumber = 1;
+		showPage(pageNumber);
+		if(pageNumber == 1){
+			$('#next').hide();
+		}
+		if(numsPage <= 1){
+			$('#prev').hide();
+			$('#next').hide();
+		}
+		else{
+			if(pageNumber==1){$('#next').show();}
+			else {$('#prev').show();$('#next').show();}
+		}
+		$('#prev').click(function () {
+			if(pageNumber==1){$('#prev').hide();$('#next').show();}
+			else{
+				pageNumber--;
+				showPage(pageNumber);}
+		});
+		
+		$('#next').click(function () {
+			$('#prev').show();
+			pageNumber++;
+			showPage(pageNumber);
+			if(pageNumber == numsPage){
+				$('#next').hide();
+			}
+		});
+	});
+	function showPage(page) {
+		var start = (10 * page) - 10; // this is if you use page 1
+		// var start = (10 * page) // this is if you use page 0
+		var showListItems = $("#insert_search li").splice(start, 10);
+		console.log(start, showListItems);
+		$("#insert_search li").hide();
+		$(showListItems).show();
+	}
+	</script>
+</head>
+<body>
+<div id="Web_1920__1">
+	<div id="search">
+		<div id="custom-search-input">
+			<div class="input-group col-md-12">
+				<form method="GET" action="">
+					<input type="text" name="search" id="search_box" class="form-control" type="text" placeholder="Search" style="font-size: 16px;"/>
+					<input type="submit" value="Search" id="search_button" class="search_button" /><br />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="Logo">
+		<span>Logo</span>
+	</div>
+	<div id="left-column">
+		<svg class="background_2">
+			<rect id="background_2" rx="56" ry="56" x="0" y="0" width="250" height="450">
+			</rect>
+		</svg>
+		<div class ="button_col">
+			<div id="index">
+				<i class="fa fa-home" aria-hidden="true"></i>
+				<div id="index_button">
+					<a href="{{ url_for('index') }}" style="text-decoration: none; color: black;">Trang chủ</a>
+				</div>	
+			</div>
+			<div id="top-rated-bt">
+				<i class="fa fa-star checked" aria-hidden="true"></i>
+				<div id="Rating_button">
+					<a href="{{ url_for('rating') }}" style="text-decoration: none; color: black;">Đánh giá</a>
+				</div>
+			</div>
+			<div id="cate">
+				<i class="fa fa-list-alt" aria-hidden="true"></i>
+				<div id="Cate_button">
+					<a href="{{ url_for('categories') }}" style="text-decoration: none; color: black;">Danh mục</a>
+				</div>
+			</div>
+			<div id="android">
+				<i class="fa fa-android" aria-hidden="true"></i>
+				<div id="android_button">
+					<a href="{{ url_for('android_os') }}" style="text-decoration: none; color: black;">Android OS</a>
+				</div>
+			</div>
+			<div id="searchbtn">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<div id="searchbtn_button">
+					<a href="{{ url_for('search_page') }}" style="text-decoration: none; color: black;">Tìm kiếm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="result">
+		<div id="searchword">Search results for <span class="searchword"></span></div>
+    	<div id="flash"></div>
+		<ol id="insert_search" class="update"></ol>
+		<div class="loader"></div>
+    </div>
+	<div style="position: relative; float:right; right: 333px; top: -600px;">
+		<button type="button" id="prev" style="width: 120px; height: 50px; font-size: 20px;" class="btn btn-success">prev</button>
+		<button type="button" id="next" style="width: 120px; height: 50px; font-size: 20px;" class="btn btn-success">next</button>
+	</div>
+</div>
+</body>
+<script>
+	window.onload = function(){
+		$('#prev').hide();
+		$('#next').hide();
+		let url_string=null;
+		url_string = window.location.toString(); //window.location.href
+		if(url_string=="http://127.0.0.1:8000/search_page"){console.log('false');$('.loader').hide();}
+		else{
+			var search_value = url_string.replace('http://127.0.0.1:8000/search_page?search=', '');
+			$('#search_box').val(search_value);
+			jQuery('#search_button').click();
+			console.log(search_value);
+		}
+	};
+</script>
+</html>

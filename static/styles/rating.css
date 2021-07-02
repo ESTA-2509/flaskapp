@@ -1,0 +1,532 @@
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+	}
+	/* latin-ext */
+	@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	.mediaViewInfo {
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920__1;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Web_1920__1;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Web_1920__1 {
+		position: relative;
+		width: 1850px;
+		height: 2300px;
+		font: normal 14px/normal Roboto;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920__1;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	@keyframes fadein {
+	
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	
+	}
+	/*search bar*/
+	#search {
+		position: absolute;
+		width: 1080px;
+		height: 65px;
+		left: 420px;
+		top: 44px;
+		overflow: visible;
+	}
+	#custom-search-input {
+		margin-top: 10px;
+		width: 1080px;
+		height: 50px;
+    }
+	.input-group {
+		position: relative;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+		width: 100%;
+		padding: 0px;
+	}
+	#search_box{
+		border:solid 1px #666666;
+		width:1080px;
+		font-size:18px;
+		padding-right: 15px;
+        padding-left: 15px;
+		height: 50px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+		z-index: 1;
+		top: 0px;
+	}
+	.search_button{
+		position: absolute;
+		height:50px; 
+		width: 80px;
+		border:#fe6f41 solid 1px;
+		padding:9px;
+		color:#000;
+		font-weight:bold;
+		font-size:16px;
+		margin-bottom: 0;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+		z-index: 2;
+		right: -15px;
+		top: 0px;
+	}
+	#Logo {
+		position: absolute;
+		overflow: visible;
+		width: 107px;
+		left: 100px;
+		top: 45px;
+		white-space: nowrap;
+		line-height: 185px;
+		margin-top: -70px;
+		text-align: left;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 45px;
+		color: rgba(43,51,91,1);
+	}
+	/*left-column*/
+	#left-column {
+		position: relative;
+		width: 228px;
+		height: 709px;
+		left: 100px;
+		top: 170px;
+		overflow: visible;
+	}
+	#background_2 {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+		position: absolute;
+
+	}
+	.background_2 {
+		position: absolute;
+		overflow: visible;
+		width: 250px;
+		height: 450px;
+	}
+	.button_col{
+		position: absolute;
+		left: 15px;
+		top: 15px;
+	}
+	#index {
+		position: relative;
+		width: 187px;
+		height: 40.685px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#index_button {
+		left: 70px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+		cursor: pointer;
+	}
+	#index .fa {
+		font: normal normal normal 50px/1 FontAwesome;
+		color: #962d2d;
+	}
+	#top-rated-bt {
+		position: relative;
+		width: 137.203px;
+		height: 45.039px;
+		left: 0px;
+		top: 50px;
+		overflow: visible;
+	}
+	#top-rated-bt .checked {
+		color: orange;
+		font: normal normal normal 50px/1 FontAwesome;
+	}
+	#Rating_button {
+		left: 71.203px;
+		top: 5px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+	}
+	#cate {
+		position: relative;
+		width: 190px;
+		height: 42px;
+		left: 0px;
+		top: 100px;
+		overflow: visible;
+	}
+	#cate .fa {
+		font: normal normal normal 50px/1 FontAwesome;
+		color: #39a9cb;
+	}
+	#Cate_button {
+		left: 68px;
+		top: 5px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+	}
+	#android {
+		position: relative;
+		width: 190px;
+		height: 42px;
+		left: 0px;
+		top: 150px;
+		overflow: visible;
+	}
+	#android .fa {
+		font: normal normal normal 50px/1 FontAwesome;
+		color: #a4c639;
+	}
+	#android_button {
+		left: 68px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+	}
+	#searchbtn {
+		position: relative;
+		width: 190px;
+		height: 42px;
+		left: 0px;
+		top: 200px;
+		overflow: visible;
+	}
+	#searchbtn .fa {
+		font: normal normal normal 50px/1 FontAwesome;
+	}
+	#searchbtn_button {
+		left: 68px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+	}
+		
+	/*Banner*/
+	#BANNER {
+		position: absolute;
+		width: 1395px;
+		height: 504px;
+		left: 435px;
+		top: 170px;
+		overflow: visible;
+	}
+	#Rectangle_584 {
+		fill: rgba(37,44,79,1);
+	}
+	.Rectangle_584 {
+		position: absolute;
+		overflow: visible;
+		width: 1395px;
+		height: 504px;
+		left: 0px;
+		top: 0px;
+	}
+	#Asset_1 {
+		position: absolute;
+		width: 603px;
+		height: 466px;
+		left: 396px;
+		top: 19px;
+		overflow: visible;
+	}
+	#Rating_chart_1 {
+		text-align: center;
+		position: relative;
+		width: 1200px;
+  		margin: 0 auto;
+		height: 800px;
+		top: 0px;
+		overflow: visible;
+	}
+	#ALL_APPS {
+		position: absolute;
+        width: 1200px;
+  		margin: 0 auto;
+		height: 800px;
+		overflow: visible;
+	}
+	#Backgroud_1 {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+        width: 1200px;
+        height: 800px;
+        margin: 0 auto;
+	}
+	.Backgroud_1 {
+		position: relative;
+		overflow: visible;
+        margin: 0 auto;
+		width: 1200px;
+        height:800px;
+	}
+	#Scroll_Group_3 {
+		mix-blend-mode: normal;
+		position: absolute;
+		width: 1200px;
+		height: 700px;
+		left: 0px;
+		top: 40px;
+		overflow: visible;
+	}
+	#Group_7221 {
+		position: relative;
+		height: 800px;
+		overflow: visible;
+        margin: 0 auto;
+		width: 1200px;
+	}
+	#CHART_14x {
+		position: relative;
+        width: 1200px;
+		margin: 0 auto;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#TITLE_1 {
+		position:relative;
+		width: 950px;
+		margin: 0 auto;
+		height: 62px;
+		top: 29px;
+		left: 0px;
+		overflow: visible;
+	}
+    #TITLE_BOX_1 {
+		fill: rgba(54,69,71,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+		width: 950px;
+	}
+	.TITLE_BOX_1 {
+		position: absolute;
+		overflow: visible;
+		margin: 0 auto;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+		width: 950px;
+	}
+	#Statics_android_apps_TITLE_1 {
+		position: absolute;
+		overflow: visible;
+		width: 100%;
+		text-align: center;
+        margin: 16px auto;
+		white-space: nowrap;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		color: rgba(255,226,104,1);
+	}
+	#Rating_chart_2 {
+		text-align: center;
+		position: relative;
+		width: 1400px;
+  		margin: 0 auto;
+		height: 700px;
+		top: 50px;
+		overflow: visible;
+	}
+	#ALL_APPS_2 {
+		position: absolute;
+        width: 1200px;
+  		margin: 0 auto;
+		height: 800px;
+		overflow: visible;
+		margin-bottom: 30px;
+	}
+	#Backgroud_2 {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+        width: 1400px;
+        height: 700px;
+        margin: 0 auto;
+	}
+	.Backgroud_2 {
+		position: relative;
+		overflow: visible;
+        margin: 0 auto;
+		width: 1400px;
+        height:700px;
+	}
+	#Scroll_Group_3_b {
+		mix-blend-mode: normal;
+		position: absolute;
+		width: 1400px;
+		height: 700px;
+		left: 0px;
+		top: 90px;
+		overflow: visible;
+	}
+	#Group_7221_b {
+		position: relative;
+		height: 700px;
+		overflow: visible;
+        margin: 0 auto;
+		width: 1400px;
+	}
+	#CHART_14x_b {
+		position: relative;
+        width: 1400px;
+		margin: 0 auto;
+		left: 0px;
+		top: 15px;
+		overflow: visible;
+	}
+	#CHART {
+		position: absolute;
+		width: 903.01px;
+		height: 731.049px;
+		left: 368.742px;
+		top: 145.623px;
+		overflow: visible;
+	}
+	#TITLE_2 {
+		position:relative;
+		width: 950px;
+		margin: 0 auto;
+		height: 62px;
+		top: 29px;
+		left: 0px;
+		overflow: visible;
+	}
+    #TITLE_BOX_2 {
+		fill: rgba(54,69,71,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+		width: 950px;
+	}
+	.TITLE_BOX_2 {
+		position: absolute;
+		overflow: visible;
+		margin: 0 auto;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+		width: 950px;
+	}
+	#Statics_android_apps_TITLE_2 {
+		position: absolute;
+		overflow: visible;
+		width: 100%;
+		text-align: center;
+        margin: 16px auto;
+		white-space: nowrap;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		color: rgba(255,226,104,1);
+	}

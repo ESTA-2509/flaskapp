@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app_detail.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<title>NT114-Apps-details</title>
+</head>
+<body>
+<div id="Web_1920__1">
+	<div id="search">
+		<div id="custom-search-input">
+			<div class="input-group col-md-12">
+				<form method="GET" action="{{ url_for('search_page') }}">
+					<input type="text" name="search" id="search_box" class="form-control" type="text" placeholder="Search" style="font-size: 16px;"/>
+					<input type="submit" value="Search" class="search_button" /><br />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="Logo">
+		<span>Logo</span>
+	</div>
+	<div id="left-column">
+		<svg class="background_2">
+			<rect id="background_2" rx="56" ry="56" x="0" y="0" width="250" height="450">
+			</rect>
+		</svg>
+		<div class ="button_col">
+			<div id="index">
+				<i class="fa fa-home" aria-hidden="true"></i>
+				<div id="index_button">
+					<a href="{{ url_for('index') }}" style="text-decoration: none; color: black;">Trang chủ</a>
+				</div>	
+			</div>
+			<div id="top-rated-bt">
+				<i class="fa fa-star checked" aria-hidden="true"></i>
+				<div id="Rating_button">
+					<a href="{{ url_for('rating') }}" style="text-decoration: none; color: black;">Đánh giá</a>
+				</div>
+			</div>
+			<div id="cate">
+				<i class="fa fa-list-alt" aria-hidden="true"></i>
+				<div id="Cate_button">
+					<a href="{{ url_for('categories') }}" style="text-decoration: none; color: black;">Danh mục</a>
+				</div>
+			</div>
+			<div id="android">
+				<i class="fa fa-android" aria-hidden="true"></i>
+				<div id="android_button">
+					<a href="{{ url_for('android_os') }}" style="text-decoration: none; color: black;">Android OS</a>
+				</div>
+			</div>
+			<div id="searchbtn">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<div id="searchbtn_button">
+					<a href="{{ url_for('search_page') }}" style="text-decoration: none; color: black;">Tìm kiếm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="result">
+		<div id="result_apps" class="update">
+			<svg class="background_1">
+				<rect id="background_1" rx="56" ry="56" x="0" y="0" >
+				</rect>
+			</svg>
+			<div class="loader"></div>
+		</div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById('Web_1920__1').style.height = "2550px";
+		document.getElementById('background_1').style.height = "2350px";
+    	document.getElementById('background_1').style.width = "1080px";
+		let url_string=null;
+		url_string = window.location.toString(); //window.location.href
+		if(url_string=="http://127.0.0.1:8000/search_page"){console.log('false');}
+		else{
+			var search_value = url_string.replace('http://127.0.0.1:8000/app_detail?appId=', '');
+			var dataString = 'appId='+ search_value;
+			console.log(search_value);
+			if(search_value==''){
+			}else{
+				$.ajax({
+				type: "POST",
+				url: "/searchdata_1",
+				data: dataString,
+				cache: false,
+				beforeSend: function(html) {
+					$(".loader").show();
+					},
+				success: function(html){
+					$("#result_apps").show();
+					$(".loader").hide();
+					$("#result_apps").append(html.data);
+				}
+				});
+			}
+			return false;
+		}
+	};
+	$(function() {
+	  $(".search_button").click(function() {
+		  var search_word = $("#search_box").val();
+		  var dataString = 'search_word='+ search_word;
+		  if(search_word==''){
+		  }else{
+			$.ajax({
+			  type: "POST",
+			  url: "/searchdata",
+			  data: dataString,
+			  cache: false,
+			  beforeSend: function(html) {
+				  document.getElementById("insert_search").innerHTML = ''; 
+				  $("#searchword").show();
+				  $(".searchword").html(search_word);
+				},
+			  success: function(html){
+				  $("#insert_search").show();
+				  $("#insert_search").append(html.data);
+			  }
+			});
+		  }
+		return false;
+	  });
+	});
+</script>
+</html>

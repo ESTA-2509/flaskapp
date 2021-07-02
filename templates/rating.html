@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/rating.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<title>NT114-RATING-Apps</title>
+<script type="text/javascript">
+	$(function() {
+	  $(".search_button").click(function() {
+		  var search_word = $("#search_box").val();
+		  var dataString = 'search_word='+ search_word;
+		  if(search_word==''){
+		  }else{
+			$.ajax({
+			  type: "POST",
+			  url: "/searchdata",
+			  data: dataString,
+			  cache: false,
+			  beforeSend: function(html) {
+				  document.getElementById("insert_search").innerHTML = ''; 
+				  $("#searchword").show();
+				  $(".searchword").html(search_word);
+				},
+			  success: function(html){
+				  $("#insert_search").show();
+				  $("#insert_search").append(html.data);
+			  }
+			});
+		  }
+		return false;
+	  });
+	});
+</script>
+</head>
+<body>
+<div id="Web_1920__1">
+	<div id="search">
+		<div id="custom-search-input">
+			<div class="input-group col-md-12">
+				<form method="GET" action="{{ url_for('search_page') }}">
+					<input type="text" name="search" id="search_box" class="form-control" type="text" placeholder="Search" style="font-size: 16px;"/>
+					<input type="submit" value="Search" class="search_button" /><br />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="Logo">
+		<span>Logo</span>
+	</div>
+	<div id="left-column">
+		<svg class="background_2">
+			<rect id="background_2" rx="56" ry="56" x="0" y="0" width="250" height="450">
+			</rect>
+		</svg>
+		<div class ="button_col">
+			<div id="index">
+				<i class="fa fa-home" aria-hidden="true"></i>
+				<div id="index_button">
+					<a href="{{ url_for('index') }}" style="text-decoration: none; color: black;">Trang chủ</a>
+				</div>	
+			</div>
+			<div id="top-rated-bt">
+				<i class="fa fa-star checked" aria-hidden="true"></i>
+				<div id="Rating_button">
+					<a href="{{ url_for('rating') }}" style="text-decoration: none; color: black;">Đánh giá</a>
+				</div>
+			</div>
+			<div id="cate">
+				<i class="fa fa-list-alt" aria-hidden="true"></i>
+				<div id="Cate_button">
+					<a href="{{ url_for('categories') }}" style="text-decoration: none; color: black;">Danh mục</a>
+				</div>
+			</div>
+			<div id="android">
+				<i class="fa fa-android" aria-hidden="true"></i>
+				<div id="android_button">
+					<a href="{{ url_for('android_os') }}" style="text-decoration: none; color: black;">Android OS</a>
+				</div>
+			</div>
+			<div id="searchbtn">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<div id="searchbtn_button">
+					<a href="{{ url_for('search_page') }}" style="text-decoration: none; color: black;">Tìm kiếm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="BANNER">
+		<svg class="Rectangle_584">
+			<rect id="Rectangle_584" rx="15" ry="15" x="0" y="0" width="1395" height="504">
+			</rect>
+		</svg>
+		<img id="Asset_1" src="/static/photos/Asset_1.png" srcset="/static/photos/Asset_1.png 1x, /static/photos/Asset_1@2x.png 2x">		
+	</div>
+	<div id="Rating_chart_1">
+		<div id="ALL_APPS">
+			<svg class="Backgroud_1">
+				<rect id="Backgroud_1" rx="56" ry="56" x="0" y="0" width="1200px"height="800px">
+				</rect>
+			</svg>
+			<div id="Scroll_Group_3">
+				<div id="Group_7221">
+					<img id="CHART_14x" src="/static/chart/RATING_APPS_1.png" srcset="/static/chart/RATING_APPS_1.png 1x">
+				</div>
+			</div>
+		</div>
+		<div id="TITLE_1">
+			<svg class="TITLE_BOX_1">
+				<rect id="TITLE_BOX_1" rx="14" ry="14" x="0" y="0" width="950" height="62">
+				</rect>
+			</svg>
+			<div id="Statics_android_apps_TITLE_1">
+				<span>SỰ PHÂN BỐ CÁC ÚNG DỤNG DỰA TRÊN ĐÁNH GIÁ NGƯỜI DÙNG</span><br>
+			</div>
+		</div>
+	</div>
+    <div id="Rating_chart_2">
+		<div id="ALL_APPS_2">
+			<svg class="Backgroud_2">
+				<rect id="Backgroud_2" rx="56" ry="56" x="0" y="0" width="1400px"height="700px">
+				</rect>
+			</svg>
+			<div id="Scroll_Group_3_b">
+				<div id="Group_7221_b">
+					<img id="CHART_14x_b" src="/static/chart/RATING_APPS_2.png" srcset="/static/chart/RATING_APPS_2.png 1x">
+				</div>
+			</div>
+		</div>
+		<div id="TITLE_2">
+			<svg class="TITLE_BOX_2">
+				<rect id="TITLE_BOX_2" rx="14" ry="14" x="0" y="0" width="950" height="62">
+				</rect>
+			</svg>
+			<div id="Statics_android_apps_TITLE_2">
+				<span>SỰ PHÂN BỔ ỨNG DỤNG THEO LƯỢT TẢI XUỐNG VÀ ĐIỂM ĐÁNH GIÁ</span><br>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

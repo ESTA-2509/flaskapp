@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<title>NT114 - Index</title>
+</head>
+<script type="text/javascript">
+	$(function() {
+	  $(".search_button").click(function() {
+		  var search_word = $("#search_box").val();
+		  var dataString = 'search_word='+ search_word;
+		  if(search_word==''){
+		  }else{
+			$.ajax({
+			  type: "POST",
+			  url: "/searchdata",
+			  data: dataString,
+			  cache: false,
+			  beforeSend: function(html) {
+				  document.getElementById("insert_search").innerHTML = ''; 
+				  $("#searchword").show();
+				  $(".searchword").html(search_word);
+				},
+			  success: function(html){
+				  $("#insert_search").show();
+				  $("#insert_search").append(html.data);
+			  }
+			});
+		  }
+		return false;
+	  });
+	});
+</script>
+<body>
+<div id="Web_1920__1">
+	<div id="search">
+		<div id="custom-search-input">
+			<div class="input-group col-md-12">
+				<form method="GET" action="{{ url_for('search_page') }}">
+					<input type="text" name="search" id="search_box" class="form-control" type="text" placeholder="Search" style="font-size: 16px;"/>
+					<input type="submit" value="Search" class="search_button" /><br />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="Logo">
+		<span>Logo</span>
+	</div>
+	<div id="left-column">
+		<svg class="background_col">
+			<rect id="background_col" rx="56" ry="56" x="0" y="0" width="250" height="450">
+			</rect>
+		</svg>
+		<div class ="button_col">
+			<div id="index">
+				<i class="fa fa-home" aria-hidden="true"></i>
+				<div id="index_button">
+					<a href="{{ url_for('index') }}" style="text-decoration: none; color: black;">Trang chủ</a>
+				</div>	
+			</div>
+			<div id="top-rated-bt">
+				<i class="fa fa-star checked" aria-hidden="true"></i>
+				<div id="Rating_button">
+					<a href="{{ url_for('rating') }}" style="text-decoration: none; color: black;">Đánh giá</a>
+				</div>
+			</div>
+			<div id="cate">
+				<i class="fa fa-list-alt" aria-hidden="true"></i>
+				<div id="Cate_button">
+					<a href="{{ url_for('categories') }}" style="text-decoration: none; color: black;">Danh mục</a>
+				</div>
+			</div>
+			<div id="android">
+				<i class="fa fa-android" aria-hidden="true"></i>
+				<div id="android_button">
+					<a href="{{ url_for('android_os') }}" style="text-decoration: none; color: black;">Android OS</a>
+				</div>
+			</div>
+			<div id="searchbtn">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<div id="searchbtn_button">
+					<a href="{{ url_for('search_page') }}" style="text-decoration: none; color: black;">Tìm kiếm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="BANNER">
+		<svg class="Rectangle_584">
+			<rect id="Rectangle_584" rx="15" ry="15" x="0" y="0" width="1395" height="504">
+			</rect>
+		</svg>
+		<img id="Asset_1" src="/static/photos/Asset_1.png" srcset="/static/photos/Asset_1.png 1x, /static/photos/Asset_1@2x.png 2x">		
+	</div>
+	<div id="SL_ALL_APPS">
+		<div id="ALL_APPS">
+			<svg class="Background_1">
+				<rect id="Background_1" rx="56" ry="56" x="0" y="0" width="1400" height="850px">
+				</rect>
+			</svg>
+			<div id="CHART_img_1">
+				<div id="Chart">
+					<img id="img_1" src="/static/chart/Line_Chart.png" srcset="/static/chart/Line_Chart.png 1x">
+				</div>
+			</div>
+		</div>
+		<div id="TITLE">
+			<svg class="Rectangle_585_fz">
+				<rect id="Rectangle_585_fz" rx="14" ry="14" x="0" y="0" width="848" height="62">
+				</rect>
+			</svg>
+			<div id="Statics_android_apps">
+				<span>THỐNG KÊ SỐ LƯỢNG ỨNG DỤNG TRÊN GOOGLE PLAY STORE</span><br>
+			</div>
+		</div>
+	</div>
+	<div id="RATING_APPS">
+		<svg class="Rectangle_592">
+			<rect id="Rectangle_592" rx="56" ry="56" x="0" y="0" width="1400" height="542">
+			</rect>
+		</svg>
+		<div id="TITLE_hk">
+			<svg class="Rectangle_585_hl">
+				<rect id="Rectangle_585_hl" rx="14" ry="14" x="0" y="0" width="679" height="62">
+				</rect>
+			</svg>
+			<div id="Rating_android_apps">
+				<span>ĐÁNH GIÁ ỨNG DỤNG TRÊN GOOGLE PLAY STORE</span><br>
+			</div>
+		</div>
+		<img id="CHART_24x" src="/static/chart/bar_Chart.png" srcset="/static/chart/bar_Chart.png">
+		<div id="Comment">
+			<div id="Group_7236">
+				<svg class="Rectangle_588">
+					<rect id="Rectangle_588" rx="0" ry="0" x="0" y="0" width="40" height="38">
+					</rect>
+				</svg>
+				<div id="Group_7226">
+					<div class="rating">
+						<div class="rating_layer rating_layer_checked" style="width:100%">
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+						</div>
+						<div class="rating_layer">
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Group_7233">
+				<svg class="Rectangle_591">
+					<rect id="Rectangle_591" rx="0" ry="0" x="0" y="0" width="40" height="38">
+					</rect>
+				</svg>
+				<div id="Group_7229">
+					<div class="rating">
+						<div class="rating_layer rating_layer_checked" style="width:80%">
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+						</div>
+						<div class="rating_layer">
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Group_7232">
+				<svg class="Rectangle_590">
+					<rect id="Rectangle_590" rx="0" ry="0" x="0" y="0" width="40" height="38">
+					</rect>
+				</svg>
+				<div id="Group_7227">
+					<div class="rating">
+						<div class="rating_layer rating_layer_checked" style="width:60%">
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+						</div>
+						<div class="rating_layer">
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Group_7235">
+				<svg class="Star_1">
+					<rect id="Star_1" rx="0" ry="0" x="0" y="0" width="40" height="38">
+					</rect>
+				</svg>
+				<div id="Group_7228">
+					<div class="rating">
+						<div class="rating_layer rating_layer_checked" style="width:20%">
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+						</div>
+						<div class="rating_layer">
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Group_7234">
+				<svg class="Rectangle_589">
+					<rect id="Rectangle_589" rx="0" ry="0" x="0" y="0" width="40" height="38">
+					</rect>
+				</svg>
+				<div id="Group_7230">
+					<div class="rating">
+						<div class="rating_layer rating_layer_checked" style="width:40%">
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+							<i class="fa fa-star fa-2x color_1"></i>
+						</div>
+						<div class="rating_layer">
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+							<i class="fa fa-star fa-2x"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="TNG_KT">
+			<div id="NH_GI_TRUNG_BNH_TT_C_NG_DNG">
+				<span>ĐÁNH GIÁ TRUNG BÌNH TẤT CẢ ỨNG DỤNG:</span>
+			</div>
+			<div id="ID41___">
+				<span style="display: inline-block;">( </span>
+				<div style="display: inline-block;">
+					{% for element in Average_Rating%}
+    				<p style="display: inline-block; width: 5px;">{{element}}</p>
+					{% endfor %}
+				</div>
+				<i class="fa fa-star fa-sm color_1" style="margin-left: 5px;"></i>
+				<span> )</span>
+			</div>
+			
+			<div id="Group_7237">
+				<div class="rating">
+					<div id="rating_star" class="rating_layer rating_layer_checked">
+						<i class="fa fa-star fa-2x color_1"></i>
+						<i class="fa fa-star fa-2x color_1"></i>
+						<i class="fa fa-star fa-2x color_1"></i>
+						<i class="fa fa-star fa-2x color_1"></i>
+						<i class="fa fa-star fa-2x color_1"></i>
+					</div>
+					<div class="rating_layer">
+						<i class="fa fa-star fa-2x"></i>
+						<i class="fa fa-star fa-2x"></i>
+						<i class="fa fa-star fa-2x"></i>
+						<i class="fa fa-star fa-2x"></i>
+						<i class="fa fa-star fa-2x"></i>
+					</div>
+				</div>
+				<script type=text/javascript>
+					document.getElementById("rating_star").style.width = String({{ percent_rating|tojson }});
+				</script>
+			</div>
+		</div>
+		<div id="View_more_1">
+			<a class="View_more_1" href="{{ url_for('rating') }}">Xem thêm  . . .</a>
+		</div>
+	</div>
+	<div id="Freevspaid">
+		<svg class="Background_2">
+			<rect id="Background_2" rx="56" ry="56" x="0" y="0" width="660" height="600">
+			</rect>
+		</svg>
+		<div id="Group_7239">
+			<img id="CIRCLE14x" src="/static/chart/pie_Chart.png" srcset="/static/chart/pie_Chart.png 1x">
+		</div>
+		<div id="Group_7242">
+			<div id="Group_7240">
+				<svg class="Rectangle_588_h">
+					<rect id="Rectangle_588_h" rx="0" ry="0" x="0" y="0" width="38" height="38">
+					</rect>
+				</svg>
+				<div id="Paid_Apps">
+					<span>ỨNG DỤNG TRẢ PHÍ</span>
+				</div>
+			</div>
+			<div id="Group_7241">
+				<svg class="Rectangle_591_h">
+					<rect id="Rectangle_591_h" rx="0" ry="0" x="0" y="0" width="38" height="38">
+					</rect>
+				</svg>
+				<div id="Free_apps">
+					<span>ỨNG DỤNG MIỄN PHÍ</span>
+				</div>
+			</div>
+		</div>
+		<div id="TITLE_3">
+			<svg class="Background_title_3">
+				<rect id="Background_title_3" rx="14" ry="14" x="0" y="0" width="625" height="62">
+				</rect>
+			</svg>
+			<div id="Free_vs_paid_apps">
+				<span>SỐ LƯỢNG ỨNG DỤNG MIỄN PHÍ VÀ TRẢ PHÍ</span>
+			</div>
+		</div>
+	</div>
+	<div id="Freevspaid_2">
+		<svg class="Background_3">
+			<rect id="Background_3" rx="56" ry="56" x="0" y="0" width="970" height="600">
+			</rect>
+		</svg>
+		<div id="Chart_4">
+			<img id="bar_Chart_2" src="/static/chart/bar_Chart_page_freevspaid.png" srcset="/static/chart/bar_Chart_page_freevspaid.png 1x">
+		</div>
+		<div id="TITLE_4">
+			<svg class="Background_title_4">
+				<rect id="Background_title_4" rx="14" ry="14" x="0" y="0" width="930" height="62">
+				</rect>
+			</svg>
+			<div id="Free_vs_paid_apps_title">
+				<span>THỐNG KÊ ỨNG DỤNG MIỄN PHÍ VÀ TRẢ PHÍ THEO LƯỢT TẢI XUỐNG</span>
+			</div>
+		</div>
+	</div>
+	<div id="Download_statics">
+		<div id="Download_chart">
+			<svg class="Background_4">
+				<rect id="Background_4" rx="56" ry="56" x="0" y="0" width="1400" height="700px">
+				</rect>
+			</svg>
+			<div id="bar_Chart_3">
+				<div id="bar_Chart_3_img">
+					<img class="bar_Chart_3_img" src="/static/chart/Download_apps_1.png" srcset="/static/chart/Download_apps_1.png 1x">
+				</div>
+			</div>
+		</div>
+		<div id="TITLE_5">
+			<svg class="Background_title">
+				<rect id="Background_title" rx="14" ry="14" x="0" y="0" width="1100" height="62">
+				</rect>
+			</svg>
+			<div id="Download_title">
+				<span>SỐ LƯỢNG DOWNLOAD DỰA TRÊN TỔNG SỐ ỨNG DỤNG TRẢ PHÍ VÀ MIỄN PHÍ</span><br>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

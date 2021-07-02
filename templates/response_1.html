@@ -1,0 +1,540 @@
+{% for row in programming %} 
+<div class="tab_result">
+    <img class = "icon" src="{{row[30]}}">
+    <div class="title">
+      <a style="text-decoration: none; color: black; margin-bottom: 20px;">
+      <span>{{row[0]}}</span> <br/></a>
+      <span class="author" >Tác giả: {{row[21]}}</span>
+      <span class="size">| {{row[9]}} {{row[11]}}</span>
+      <div id="Group_7226">
+        <div class="rating">
+          <div id="rating_layer_checked" class="rating_layer rating_layer_checked" >
+            <i class="fa fa-star fa-2x"></i>
+            <i class="fa fa-star fa-2x"></i>
+            <i class="fa fa-star fa-2x"></i>
+            <i class="fa fa-star fa-2x"></i>
+            <i class="fa fa-star fa-2x"></i>
+          </div>
+          <div class="rating_layer">
+            <i class="fa fa-star fa-2x"></i>
+            <i class="fa fa-star fa-2x"></i>
+            <i class="fa fa-star fa-2x"></i>
+            <i class="fa fa-star fa-2x"></i>
+            <i class="fa fa-star fa-2x"></i>
+          </div>
+        </div>    
+      </div>
+    </div>
+    <a href="{{row[45]}}" ><img class="link_to_chplay" src="/static/photos/link_to_chplay.png"></a>
+    <div class="description">
+      <span class="description_title" >Mô tả</span><br><br>
+      <div style="font-size: 16px;" class="more" id="more">{{row[3]|safe}}</div>
+      <div class="text-center" style="margin: 20px; font-size: 16px;">
+        <button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#Desc_modal">Chi tiết</button>
+      </div>
+      <div id="Desc_modal" class="modal">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable ">
+          <div class="modal-content" style="width: 700px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="font-size: 20px;">Mô tả</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button> 
+                </div>
+                <div class="modal-body">
+                  {{row[2]|safe}}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="more_info">
+      <span class="more_info_title" >Thông tin cơ bản</span><br><br>
+      <ul class="info_title">
+        <li>Ngày tạo</li>
+        <li>Phiên bản</li>
+        <li>Dung lượng</li>
+        <li>Android hỗ trợ</li>
+        <li>Lượt tải</li>
+        <li>Lượt đánh giá</li>
+        <li>Xếp hạng nội dung</li>
+        <li>Chi tiêu ứng dụng</li>
+        <li>Địa chỉ</li>
+        <li>Website</li>
+        <li>Chính sách bảo mật</li>
+        <li>MD5</li>
+        <li>SHA-1	</li>
+        <li>SHA-256	</li>
+        <li>Vhash	</li>
+        <li>TLSH</li>
+      </ul>
+      <ul class="info">
+        <li>{{row[38]|safe}}</li>
+        <li>{{row[40]|safe}}</li>
+        <li>{{row[18]|safe}}</li>
+        <li>{{row[20]|safe}}</li>
+        <li>{{row[5]|safe}}</li>
+        <li>{{row[8]|safe}}</li>
+        <li>{{row[34]|safe}}</li>
+        <li>{{row[17]|safe}}</li>
+        <li>{{row[25]|safe}}</li>
+        <li><a href="{{row[24]|safe}}">Click here</a></li>
+        <li><a href="{{row[26]|safe}}">Click here</a></li>
+        <li>09a446b4ed12dd58dee1520b7bd152e9</li>
+        <li>84b8f487844200963dc07100ea10702011bde920</li>
+        <li>420c60f2d4030f843108de71c9ffefe7645c7f01eaddc71192ff82036e946362</li>
+        <li>337df1612106a35357fad6b95fa351d6	</li>
+        <li>T157C623D6B381BC21DDF289739F97632221218D04C847A2AB2428336DBA77DD84F5EDD5</li>
+      </ul>
+    </div>
+    <div class="permission">
+      <span class="more_info_title" >Permissions</span><br><br>
+      <ul class="perm_info">
+        <li>android.permission.BLUETOOTH</li>
+        <li>android.permission.CAMERA</li>
+        <li>android.permission.INTERNET</li>
+        <li>android.permission.MANAGE_ACCOUNTS</li>
+        <li>android.permission.WRITE_EXTERNAL_STORAGE</li>
+        <li>android.permission.BATTERY_STATS</li>
+        <li>android.permission.AUTHENTICATE_ACCOUNTS</li>
+        <li>android.permission.READ_PHONE_STATE</li>
+        <li>android.permission.RECORD_AUDIO</li>
+        <li>android.permission.READ_CONTACTS</li>
+        <li>android.permission.READ_PROFILE</li>
+        <li>android.permission.CHANGE_NETWORK_STATE</li>
+        <li>android.permission.CHANGE_NETWORK_STATE</li>
+        <li>com.facebook.mlite.BROADCAST</li>
+        <li>com.android.launcher.permission.UNINSTALL_SHORTCUT</li>
+        <li>com.facebook.pages.app.provider.ACCESS</li>
+        <li>android.permission.USE_FULL_SCREEN_INTENT</li>
+        <li>com.facebook.orca.provider.ACCESS</li>
+        <li>com.facebook.permission.prod.FB_APP_COMMUNICATION</li>
+        <li>com.sec.android.provider.badge.permission.WRITE</li>
+        <li>android.permission.WAKE_LOCK</li>
+        <li>com.android.launcher.permission.INSTALL_SHORTCUT</li>
+        <li>com.google.android.c2dm.permission.RECEIVE</li>
+        <li>android.permission.ACCESS_NETWORK_STATE</li>
+        <li>com.htc.launcher.permission.UPDATE_SHORTCUT</li>
+        <li>com.facebook.wakizashi.provider.ACCESS</li>
+        <li>com.htc.launcher.permission.READ_SETTINGS</li>
+        <li>android.permission.READ_EXTERNAL_STORAGE</li>
+        <li>android.permission.RECEIVE_BOOT_COMPLETED</li>
+        <li>com.facebook.lite.provider.ACCESS</li>
+        <li>android.permission.MODIFY_AUDIO_SETTINGS</li>
+        <li>android.permission.FOREGROUND_SERVICE</li>
+        <li>android.permission.VIBRATE</li>
+        <li>com.sonyericsson.home.permission.BROADCAST_BADGE</li>
+        <li>com.facebook.katana.provider.ACCESS</li>
+        <li>android.permission.ACCESS_WIFI_STATE</li>
+        <li>android.permission.REQUEST_INSTALL_PACKAGES</li>
+        <li>com.facebook.mlite.provider.ACCESS</li>
+        <li>com.sec.android.provider.badge.permission.READ</li>
+        <li>android.permission.GET_ACCOUNTS</li>
+      </ul>
+      <button id="next" type="button" class="btn btn-success btn-circle perm_btn" onClick='expand()'><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+      <button id="less" type="button" class="btn btn-success btn-circle perm_btn" onClick='collapse()'><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+    </div>
+    <div class="Activities">
+      <span class="more_info_title" >Activities</span><br><br>
+      <ul class="Activities_info">
+        <li>com.facebook.mlite.coreui.view.MainActivity</li>
+        <li>com.facebook.mlite.sso.view.LoginActivity</li>
+        <li>com.facebook.mlite.threadview.view.ThreadViewActivity</li>
+        <li>com.facebook.mlite.messagerequests.view.MessageRequestsActivity</li>
+        <li>com.facebook.mlite.messagerequests.view.FilteredRequestsActivity</li>
+        <li>com.facebook.mlite.share.view.ShareActivity</li>
+        <li>com.facebook.mlite.composer.view.ComposerActivity</li>
+        <li>com.facebook.mlite.mediaview.view.MediaViewActivity</li>
+        <li>com.facebook.mlite.update.view.ApkUpdateActivity</li>
+        <li>com.facebook.mlite.bugreporter.view.BugReporterActivity</li>
+        <li>com.facebook.mlite.zero.optin.MLiteZeroOptinInterstitial</li>
+        <li>com.google.android.gms.common.api.GoogleApiActivity</li>
+        <li>com.facebook.mlite.accounts.view.AccountsActivity</li>
+        <li>com.facebook.mlite.camera.view.CameraActivity</li>
+        <li>com.facebook.mlite.composer.view.CallComposerActivity</li>
+        <li>com.facebook.mlite.frx.web.view.FrxReportActivity</li>
+        <li>com.facebook.mlite.gdpr.view.GdprConsentActivity</li>
+        <li>com.facebook.mlite.gdpr.view.GdprControlCenterActivity</li>
+        <li>com.facebook.mlite.intenthandling.IntentHandlerActivity</li>
+        <li>com.facebook.mlite.intenthandling.SecureIntentHandlerActivity</li>
+        <li>com.facebook.mlite.lowdisk.view.LowDiskSpaceActivity</li>
+        <li>com.facebook.mlite.notify.action.MLiteNotificationThreadMuteDialogActivity</li>
+        <li>com.facebook.mlite.nux.lib.implementation.NuxActivity</li>
+        <li>com.facebook.mlite.policies.view.thirdpartynotices.ThirdPartyNoticesActivity</li>
+        <li>com.facebook.mlite.presence.pref.view.PresencePreferenceActivity</li>
+        <li>com.facebook.mlite.privacyflowtrigger.view.PrivacyFlowTriggerActivity</li>
+        <li>com.facebook.mlite.rtc.view.CallActivity</li>
+        <li>com.facebook.mlite.story.viewer.StoryViewerActivity</li>
+        <li>com.facebook.mlite.threadcustomization.view.NicknamesActivity</li>
+        <li>com.facebook.mlite.threadview.view.ParticipantsActivity</li>
+        <li>com.facebook.mlite.util.app.ProcessRestart</li>
+      </ul>
+      <button id="next_act" type="button" class="btn btn-success btn-circle perm_btn" onClick='expand_1()'><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+      <button id="less_act" type="button" class="btn btn-success btn-circle perm_btn" onClick='collapse_1()'><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+    </div>
+    <div class="Services">
+      <span class="more_info_title" >Services</span><br><br>
+      <ul class="Services_info">
+        <li>com.facebook.mlite.alarm.handling.AlarmHandlingService</li>
+        <li>com.facebook.mlite.bugreporter.network.BugReporterService</li>
+        <li>com.facebook.mlite.notify.ThreadPicService</li>
+        <li>com.facebook.mlite.notify.NotificationNotVisibleService</li>
+        <li>com.facebook.mlite.notify.DelayedNotificationService</li>
+        <li>com.google.firebase.components.ComponentDiscoveryService</li>
+        <li>com.google.firebase.messaging.FirebaseMessagingService</li>
+        <li>com.google.android.gms.analytics.AnalyticsService</li>
+        <li>com.google.android.gms.analytics.AnalyticsJobService</li>
+        <li>com.facebook.analytics2.logger.LollipopUploadService</li>
+        <li>com.facebook.analytics2.logger.AlarmBasedUploadService</li>
+        <li>com.facebook.analytics2.logger.GooglePlayUploadService</li>
+        <li>com.facebook.common.errorreporting.memory.service.jobschedulercompat.DumperUploadService</li>
+        <li>com.facebook.common.errorreporting.memory.service.jobschedulercompat.DumperUploadGcmTaskService</li>
+        <li>com.facebook.crudolib.optimisticwrite.NetworkWriteService</li>
+        <li>com.facebook.crudolib.optimisticwrite.GcmNetworkWriteService</li>
+        <li>com.facebook.mlite.jobscheduler.LiteJobSchedulerAlarmManagerService</li>
+        <li>com.facebook.mlite.jobscheduler.LiteJobSchedulerJobSchedulerService</li>
+        <li>com.facebook.mlite.jobscheduler.LiteJobSchedulerGcmTaskService</li>
+        <li>com.facebook.mlite.mediaupload.instance.doorstopjob.MediaSendDoorstopJobService</li>
+        <li>com.facebook.mlite.mediaupload.instance.doorstopjob.MediaSendDoorstopGcmService</li>
+        <li>com.facebook.mlite.network.graphql.impl.GraphQLJobSchedulerService</li>
+        <li>com.facebook.mlite.network.graphql.impl.GraphQLGcmTaskService</li>
+        <li>com.facebook.mlite.rtc.service.RtcCallService</li>
+        <li>com.facebook.mlite.sso.accountmanager.MLiteAuthenticatorService</li>
+        <li>com.facebook.mlite.syncjob.MLitePushNotificationService</li>
+        <li>com.facebook.mlite.syncjob.MLiteStickyService</li>
+        <li>com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppCacheService</li>
+        <li>com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppCacheJobService</li>
+        <li>com.facebook.pushlite.PushLiteFallbackJobService</li>
+        <li>com.facebook.pushlite.PushLiteLollipopJobService</li>
+        <li>com.facebook.pushlite.PushLiteGCMJobService</li>
+        <li>com.facebook.pushlite.tokenprovider.fcm.PushLiteFcmListenerService</li>
+        <li>com.facebook.pushlite.tokenprovider.fcm.PushLiteFirebaseMessagingService</li>
+      </ul>
+      <button id="next_srv" type="button" class="btn btn-success btn-circle btn-circle-sm m-1 perm_btn" onClick='expand_2()'><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+      <button id="less_srv" type="button" class="btn btn-success btn-circle btn-circle-sm m-1 perm_btn" onClick='collapse_2()'><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+    </div>
+    <div class="Receivers">
+      <span class="more_info_title" >Receivers</span><br><br>
+      <ul class="Receivers_info">
+        <li>com.facebook.mlite.alarm.management.AlarmBroadcastReceiver</li>
+        <li>com.facebook.mlite.boot.BootBroadcastReceiver</li>
+        <li>com.facebook.mlite.update.PackageReplacedBroadcastReceiver</li>
+        <li>com.facebook.mlite.update.MyPackageReplacedBroadcastReceiver</li>
+        <li>com.facebook.mlite.util.timechange.TimeChangeReceiver</li>
+        <li>com.facebook.mlite.notify.NotificationBroadcastReceiver</li>
+        <li>com.google.firebase.iid.FirebaseInstanceIdReceiver</li>
+        <li>com.google.android.gms.analytics.AnalyticsReceiver</li>
+        <li>com.facebook.analytics2.logger.HighPriUploadRetryReceiver</li>
+        <li>com.facebook.crudolib.optimisticwrite.TaskExpiredReceiver</li>
+        <li>com.facebook.crudolib.optimisticwrite.BootCompletedReceiver</li>
+        <li>com.facebook.errorreporting.lacrima.detector.broadcast.SecureShutdownBootBroadcastReceiver</li>
+        <li>com.facebook.errorreporting.lacrima.detector.broadcast.LockScreenBroadcastReceiver</li>
+        <li>com.facebook.mlite.familydeviceid.MLiteFamilyDeviceIdRequestReceiver</li>
+        <li>com.facebook.mlite.rtc.receiver.NotificationActionReceiver</li>
+        <li>com.facebook.mlite.sso.accountmanager.MLiteAccountsChangedReceiver</li>
+        <li>com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppFlag</li>
+        <li>com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppReceiver</li>
+        <li>com.facebook.oxygen.preloads.sdk.firstparty.settings.TosAcceptedFlag</li>
+        <li>com.facebook.pushlite.tokenprovider.fbns.PushLiteFbnsListenerService</li>
+      </ul>
+      <button id="next_rcv" type="button" class="btn btn-success btn-circle btn-circle-sm m-1 perm_btn" onClick='expand_3()'><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+      <button id="less_rcv" type="button" class="btn btn-success btn-circle btn-circle-sm m-1 perm_btn" onClick='collapse_3()'><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+<script>
+  function expand() {
+     //get element
+    var height=document.getElementById('background_1').style.height;
+    var height_page=document.getElementById('Web_1920__1').style.height;
+     //transform element from string to integer
+    height=height.replace("px","");
+    height=+height;
+    height_page=height_page.replace("px","");
+    height_page=+height_page;
+      //change height
+    var n=height;
+    height=n+$(".perm_info li").length*30-150+'px';
+    document.getElementById('background_1').style.height = height; 
+    var n=height_page;
+    height_page=n+$(".perm_info li").length*30-150+'px';  
+    document.getElementById('Web_1920__1').style.height = height_page;   
+  }
+  function collapse() {
+     //get element
+    var height=document.getElementById('background_1').style.height;
+    var height_page=document.getElementById('Web_1920__1').style.height;
+     //transform element from string to integer
+    height=height.replace("px","");
+    height=+height;
+    height_page=height_page.replace("px","");
+    height_page=+height_page;
+      //change height
+    var n=height;
+    height=n-($(".perm_info li").length*30-150) +'px';   
+    document.getElementById('background_1').style.height = height;  
+    var n=height_page;
+    height_page=n-($(".perm_info li").length*30-150) +'px';   
+    document.getElementById('Web_1920__1').style.height = height_page;   
+  }
+  function expand_1() {
+     //get element
+    var height=document.getElementById('background_1').style.height;
+    var height_page=document.getElementById('Web_1920__1').style.height;
+     //transform element from string to integer
+    height=height.replace("px","");
+    height=+height;
+    height_page=height_page.replace("px","");
+    height_page=+height_page;
+      //change height
+    var n=height;
+    height=n+($(".Activities_info li").length*30-150)+'px';
+    document.getElementById('background_1').style.height = height; 
+    var n=height_page;
+    height_page=n+($(".Activities_info li").length*30-150)+'px';  
+    document.getElementById('Web_1920__1').style.height = height_page;   
+  }
+  function collapse_1() {
+     //get element
+    var height=document.getElementById('background_1').style.height;
+    var height_page=document.getElementById('Web_1920__1').style.height;
+     //transform element from string to integer
+    height=height.replace("px","");
+    height=+height;
+    height_page=height_page.replace("px","");
+    height_page=+height_page;
+      //change height
+    var n=height;
+    height=n - ($(".Activities_info li").length*30-150) + 'px';   
+    document.getElementById('background_1').style.height = height;  
+    var n=height_page;
+    height_page=n - ($(".Activities_info li").length*30-150) + 'px';   
+    document.getElementById('Web_1920__1').style.height = height_page;   
+  }
+  function expand_2() {
+     //get element
+    var height=document.getElementById('background_1').style.height;
+    var height_page=document.getElementById('Web_1920__1').style.height;
+     //transform element from string to integer
+    height=height.replace("px","");
+    height=+height;
+    height_page=height_page.replace("px","");
+    height_page=+height_page;
+      //change height
+    var n=height;
+    height=n+ ($(".Services_info li").length*30-150) +'px';
+    document.getElementById('background_1').style.height = height; 
+    var n=height_page;
+    height_page=n+ ($(".Services_info li").length*30-150) +'px';  
+    document.getElementById('Web_1920__1').style.height = height_page;   
+  }
+  function collapse_2() {
+     //get element
+    var height=document.getElementById('background_1').style.height;
+    var height_page=document.getElementById('Web_1920__1').style.height;
+     //transform element from string to integer
+    height=height.replace("px","");
+    height=+height;
+    height_page=height_page.replace("px","");
+    height_page=+height_page;
+      //change height
+    var n=height;
+    height=n- ($(".Services_info li").length*30-150) +'px';   
+    document.getElementById('background_1').style.height = height;  
+    var n=height_page;
+    height_page=n- ($(".Services_info li").length*30-150) +'px';   
+    document.getElementById('Web_1920__1').style.height = height_page;   
+  }
+  function expand_3() {
+     //get element
+    var height=document.getElementById('background_1').style.height;
+    var height_page=document.getElementById('Web_1920__1').style.height;
+     //transform element from string to integer
+    height=height.replace("px","");
+    height=+height;
+    height_page=height_page.replace("px","");
+    height_page=+height_page;
+      //change height
+    var n=height;
+    height=n+ ($(".Receivers_info li").length*30-150) +'px';
+    document.getElementById('background_1').style.height = height; 
+    var n=height_page;
+    height_page=n+ ($(".Receivers_info li").length*30-150) +'px';  
+    document.getElementById('Web_1920__1').style.height = height_page;   
+  }
+  function collapse_3() {
+     //get element
+    var height=document.getElementById('background_1').style.height;
+    var height_page=document.getElementById('Web_1920__1').style.height;
+     //transform element from string to integer
+    height=height.replace("px","");
+    height=+height;
+    height_page=height_page.replace("px","");
+    height_page=+height_page;
+      //change height
+    var n=height;
+    height=n- ($(".Receivers_info li").length*30-150) +'px';   
+    document.getElementById('background_1').style.height = height;  
+    var n=height_page;
+    height_page=n- ($(".Receivers_info li").length*30-150) +'px';   
+    document.getElementById('Web_1920__1').style.height = height_page;   
+  }
+  $(document).ready(function(){
+    document.getElementById('rating_layer_checked').style.width = "{{row[47]}}" + "%";
+    function alignModal(){
+        var modalDialog = $(this).find(".modal-dialog");
+        
+        // Applying the top margin on modal to align it vertically center
+        modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
+    }
+    // Align modal when it is displayed
+    $(".modal").on("shown.bs.modal", alignModal);
+    // Align modal when user resize the window
+    $(window).on("resize", function(){
+        $(".modal:visible").each(alignModal);
+    });  
+
+    //Permission
+    var list = $(".perm_info li");
+    var numToShow = 5;
+    var numInList = list.length;
+    console.log($(".perm_info li").length*30-150);
+    list.hide();
+    if (numInList > numToShow) {
+      $('#next').show();
+      $('#less').hide();
+    }
+    list.slice(0, numToShow).show();
+
+    $('#next').click(function(){
+      var showing = list.filter(':visible').length;
+      list.slice(showing - 1, showing + numInList - 5).fadeIn();
+      var nowShowing = list.filter(':visible').length;
+      if (nowShowing >= numInList) {
+        $('#next').hide();
+        $('#less').show();
+      }
+    });
+
+    $('#less').click(function(){
+      list.hide();
+      list.slice(0, numToShow).show();
+      $('#less').hide();
+      $('#next').show();
+    });
+
+    //Activities
+    var list_Activities_info = $(".Activities_info li");
+    var numInList_Activities_info = list_Activities_info.length;
+    list_Activities_info.hide();
+    if (numInList_Activities_info > numToShow) {
+      $('#next_act').show();
+      $('#less_act').hide();
+    }
+
+    list_Activities_info.slice(0, numToShow).show();
+    $('#next_act').click(function(){
+      var showing_Activities_info = list_Activities_info.filter(':visible').length;
+      list_Activities_info.slice(showing_Activities_info - 1, showing_Activities_info + numInList_Activities_info - 5).fadeIn();
+      var nowShowing_Activities_info = list_Activities_info.filter(':visible').length;
+      if (nowShowing_Activities_info >= numInList_Activities_info) {
+        $('#next_act').hide();
+        $('#less_act').show();
+      }
+    });
+
+    $('#less_act').click(function(){
+      list_Activities_info.hide();
+      list_Activities_info.slice(0, numToShow).show();
+      $('#less_act').hide();
+      $('#next_act').show();
+    });
+    
+     //Services
+     var list_Services_info = $(".Services_info li");
+    var numInList_Services_info = list_Services_info.length;
+    list_Services_info.hide();
+    if (numInList_Services_info > numToShow) {
+      $('#next_srv').show();
+      $('#less_srv').hide();
+    }
+
+    list_Services_info.slice(0, numToShow).show();
+    $('#next_srv').click(function(){
+      var showing_Services_info = list_Services_info.filter(':visible').length;
+      list_Services_info.slice(showing_Services_info - 1, showing_Services_info + numInList_Services_info - 5).fadeIn();
+      var nowShowing_Services_info = list_Services_info.filter(':visible').length;
+      if (nowShowing_Services_info >= numInList_Services_info) {
+        $('#next_srv').hide();
+        $('#less_srv').show();
+      }
+    });
+
+    $('#less_srv').click(function(){
+      list_Services_info.hide();
+      list_Services_info.slice(0, numToShow).show();
+      $('#less_srv').hide();
+      $('#next_srv').show();
+    });
+
+    //Receivers
+    var list_Receivers_info = $(".Receivers_info li");
+    var numInList_Receivers_info = list_Receivers_info.length;
+    list_Receivers_info.hide();
+    if (numInList_Receivers_info > numToShow) {
+      $('#next_rcv').show();
+      $('#less_rcv').hide();
+    }
+
+    list_Receivers_info.slice(0, numToShow).show();
+    $('#next_rcv').click(function(){
+      var showing_Receivers_info = list_Receivers_info.filter(':visible').length;
+      list_Receivers_info.slice(showing_Receivers_info - 1, showing_Receivers_info + numInList_Receivers_info - 5).fadeIn();
+      var nowShowing_Receivers_info = list_Receivers_info.filter(':visible').length;
+      if (nowShowing_Receivers_info >= numInList_Receivers_info) {
+        $('#next_rcv').hide();
+        $('#less_rcv').show();
+      }
+    });
+
+    $('#less_rcv').click(function(){
+      list_Receivers_info.hide();
+      list_Receivers_info.slice(0, numToShow).show();
+      $('#less_rcv').hide();
+      $('#next_rcv').show();
+    });
+  });
+</script>
+<style>
+  #Group_7226 {
+		position: relative;
+		width: 200px;
+		height: fit-content;
+		left: 0px;
+		top: 40px;
+		overflow: visible;
+		}
+	.rating{
+		position: relative;
+		float: left;
+		margin-right: 2px;
+		margin-bottom: 3px;
+		display: block;
+		height: fit-content;
+		line-height: 25px;
+	}
+	.rating .rating_layer{
+			display: inline-block;
+	}
+	.rating .rating_layer_checked{
+		position: absolute;
+		overflow: hidden;
+		white-space: nowrap;
+		color:#faca51;
+	}
+	.fa {
+			font: normal normal normal 30px/1 FontAwesome;
+	}
+</style>
+{% endfor %}

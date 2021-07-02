@@ -1,0 +1,1139 @@
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+	}
+	/* latin-ext */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	.mediaViewInfo {
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920__1;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Web_1920__1;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Web_1920__1 {
+		position: absolute;
+		width: 1850px;
+		height: 3550px;
+		font: normal 14px/normal Roboto;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920__1;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	@keyframes fadein {
+	
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	
+	}
+	#search {
+		position: absolute;
+		width: 1080px;
+		height: 65px;
+		left: 420px;
+		top: 44px;
+		overflow: visible;
+	}
+	#custom-search-input {
+		margin-top: 10px;
+		width: 1080px;
+		height: 50px;
+    }
+	.input-group {
+		position: relative;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+		width: 100%;
+		padding: 0px;
+	}
+	#search_box{
+		border:solid 1px #666666;
+		width:1080px;
+		font-size:18px;
+		padding-right: 15px;
+        padding-left: 15px;
+		height: 50px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+		z-index: 1;
+		top: 0px;
+	}
+	.search_button{
+		position: absolute;
+		height:50px; 
+		width: 80px;
+		border:#fe6f41 solid 1px;
+		padding:9px;
+		color:#000;
+		font-weight:bold;
+		font-size:16px;
+		margin-bottom: 0;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+		z-index: 2;
+		right: -15px;
+		top: 0px;
+	}
+	#Logo {
+		position: absolute;
+		overflow: visible;
+		width: 107px;
+		left: 100px;
+		top: 45px;
+		white-space: nowrap;
+		line-height: 185px;
+		margin-top: -70px;
+		text-align: left;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 45px;
+		color: rgba(43,51,91,1);
+	}
+	/*left-column*/
+	#left-column {
+		position: relative;
+		width: 228px;
+		height: 709px;
+		left: 100px;
+		top: 170px;
+		overflow: visible;
+	}
+	#background_col {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+		position: absolute;
+
+	}
+	.background_col {
+		position: absolute;
+		overflow: visible;
+		width: 250px;
+		height: 450px;
+	}
+	.button_col{
+		position: absolute;
+		left: 15px;
+		top: 15px;
+	}
+	#index {
+		position: relative;
+		width: 187px;
+		height: 40.685px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#index_button {
+		left: 70px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+		cursor: pointer;
+	}
+	#index .fa {
+		font: normal normal normal 50px/1 FontAwesome;
+		color: #962d2d;
+	}
+	#top-rated-bt {
+		position: relative;
+		width: 137.203px;
+		height: 45.039px;
+		left: 0px;
+		top: 50px;
+		overflow: visible;
+	}
+	#top-rated-bt .checked {
+		color: orange;
+		font: normal normal normal 50px/1 FontAwesome;
+	}
+	#Rating_button {
+		left: 71.203px;
+		top: 5px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+	}
+	#cate {
+		position: relative;
+		width: 190px;
+		height: 42px;
+		left: 0px;
+		top: 100px;
+		overflow: visible;
+	}
+	#cate .fa {
+		font: normal normal normal 50px/1 FontAwesome;
+		color: #39a9cb;
+	}
+	#Cate_button {
+		left: 68px;
+		top: 5px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+	}
+	#android {
+		position: relative;
+		width: 190px;
+		height: 42px;
+		left: 0px;
+		top: 150px;
+		overflow: visible;
+	}
+	#android .fa {
+		font: normal normal normal 50px/1 FontAwesome;
+		color: #a4c639;
+	}
+	#android_button {
+		left: 68px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+	}
+	#searchbtn {
+		position: relative;
+		width: 190px;
+		height: 42px;
+		left: 0px;
+		top: 200px;
+		overflow: visible;
+	}
+	#searchbtn .fa {
+		font: normal normal normal 50px/1 FontAwesome;
+	}
+	#searchbtn_button {
+		left: 68px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 123px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		color: black;
+	}
+	
+		
+	/*Banner*/
+	#BANNER {
+		position: absolute;
+		width: 1395px;
+		height: 504px;
+		left: 435px;
+		top: 170px;
+		overflow: visible;
+	}
+	#Rectangle_584 {
+		fill: rgba(37,44,79,1);
+	}
+	.Rectangle_584 {
+		position: absolute;
+		overflow: visible;
+		width: 1395px;
+		height: 504px;
+		left: 0px;
+		top: 0px;
+	}
+	#Asset_1 {
+		position: absolute;
+		width: 603px;
+		height: 466px;
+		left: 396px;
+		top: 19px;
+		overflow: visible;
+	}
+	#SL_ALL_APPS {
+		text-align: center;
+		position: absolute;
+		max-width: 1400px;
+  		margin: auto;
+		height: 850px;
+		left: 120px;
+		right: 120px;
+		top: 730px;
+		overflow: visible;
+	}
+	#ALL_APPS {
+		position: absolute;
+		height: 850px;
+		overflow: visible;
+	}
+	#Background_1 {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Background_1 {
+		position: absolute;
+		overflow: visible;
+		height: 850px;
+		width: 1400px;
+	}
+	#CHART_img_1 {
+		mix-blend-mode: normal;
+		position: absolute;
+		width: fit-content;
+		margin: 0 auto;
+		height: fit-content;
+		left: 0px;
+		top: 40px;
+		overflow: visible;
+	}
+	#Chart_1 {
+		position: relative;
+		width: 1400px;
+		margin: 0 auto;
+		overflow: visible;
+	}
+	#img_1 {
+		position: relative;
+		width: 1600px;
+		margin: 0 auto;
+		left: -100px;
+		top: 0px;
+		overflow: visible;
+	}
+	#TITLE {
+		text-align:center;
+		position:relative;
+		width: 848px;
+		margin: 0 auto;
+		height: 91px;
+		top: 29px;
+		overflow: visible;
+	}
+	#Rectangle_585_fz {
+		fill: rgba(54,69,71,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_585_fz {
+		position: absolute;
+		overflow: visible;
+		width: 848px;
+		margin: 0 200;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+	}
+	#Statics_android_apps {
+		left: 25px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 765px;
+		white-space: nowrap;
+		line-height: 43px;
+		margin-top: -8.5px;
+		text-align: left;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		color: rgba(255,226,104,1);
+	}
+	#RATING_APPS {
+		position: absolute;
+		width: 1400px;
+		height: 542px;
+		margin: 0 auto;
+		left: 120px;
+		right: 120px;
+		top: 1600px;
+		overflow: visible;
+	}
+	#Rectangle_592 {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_592 {
+		position: absolute;
+		overflow: visible;
+		width: 1400px;
+		height: 542px;
+		left: 0px;
+		top: 0px;
+	}
+	#View_more_1 {
+		right: 50px;
+		float: right;
+		top: 280px;
+		position: relative;
+		overflow: visible;
+		width: fit-content;
+		white-space: nowrap;
+		text-align: center;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		letter-spacing: 0.16px;
+	}
+	.View_more_1{
+		text-decoration: none;
+		color: #E54E35;
+	}
+	#TNG_KT {
+		position: relative;
+		width: 848px;
+		height: 40px;
+		margin: 0 auto;
+		top: 275px;
+		overflow: visible;
+	}
+	#NH_GI_TRUNG_BNH_TT_C_NG_DNG {
+		left: 0px;
+		top: 5px;
+		position: absolute;
+		overflow: visible;
+		width: 579px;
+		white-space: nowrap;
+		line-height: 30px;
+		margin-top: -2.5px;
+		text-align: left;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 25px;
+		color: rgba(54,69,71,1);
+		letter-spacing: 0.5px;
+	}
+	#ID41___ {
+		right: 2px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 101px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		color: rgba(54,69,71,1);
+		letter-spacing: 0.5px;
+	}
+	#Group_7237 {
+		position: absolute;
+		width: fit-content;
+		height: fit-content;
+		left: 589.196px;
+		top: 2px;
+		overflow: visible;
+	}
+	.rating{
+	position: relative;
+    	float: left;
+    	margin-right: 2px;
+    	margin-bottom: 3px;
+    	display: block;
+		height: fit-content;
+		line-height: 25px;
+	}
+	.rating .rating_layer{
+		display: inline-block;
+	}
+	.rating .rating_layer_checked{
+		position: absolute;
+    	overflow: hidden;
+    	white-space: nowrap;
+	}
+	.fa {
+		font: normal normal normal 30px/1 FontAwesome;
+	}
+	.color_1 {
+	color:#faca51;
+	}
+	#Scroll_Group_1 {
+		mix-blend-mode: normal;
+		position: absolute;
+		width: 22.731px;
+		height: 25.693px;
+		left: 124.614px;
+		top: 0px;
+		overflow: hidden;
+	}
+	#Group_7238 {
+		position: absolute;
+		width: 25.731px;
+		height: 25.693px;
+		left: -4px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Comment {
+		position: absolute;
+		width: 50%;
+		height: 174px;
+		display: block;
+		margin-left: 25%;
+  		margin-right: 25%;
+		top: 240px;
+		overflow: hidden;
+	}
+	#Group_7236 {
+		position: absolute;
+		width: 221.964px;
+		height: 38px;
+		left: 100px;
+		right: 100px;
+		top: 136px;
+		overflow: visible;
+	}
+	#Rectangle_588 {
+		fill: #3FAA59;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_588 {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_7226 {
+		position: absolute;
+		width: 155.764px;
+		height: 25.693px;
+		left: 66.2px;
+		top: 6.499px;
+		overflow: visible;
+	}
+	#Group_7233 {
+		position: absolute;
+		width: 189.253px;
+		height: 40px;
+		right: 100px;
+		top: 68px;
+		overflow: visible;
+	}
+	#Rectangle_591 {
+		fill: #B3DF72;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_591 {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_7229 {
+		position: absolute;
+		width: 155.764px;
+		height: auto;
+		left: 65.583px;
+		top: 6.499px;
+		overflow: visible;
+	}
+	#Group_7232 {
+		position: absolute;
+		width: 157.776px;
+		height: 40px;
+		left: 100px;
+		top: 68px;
+		overflow: visible;
+	}
+	#Rectangle_590 {
+		fill: #FEFFBE;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_590 {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_7227 {
+		position: absolute;
+		width: 155.764px;
+		height: auto;
+		left: 66.2px;
+		top: 6.499px;
+		overflow: visible;
+	}
+	#Group_7234 {
+		position: absolute;
+		width: 189.253px;
+		height: 38px;
+		right: 100px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_589 {
+		fill: #FDBB6C;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_589 {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_7230 {
+		position: absolute;
+		width: 155.764px;
+		height: auto;
+		left: 65.583px;
+		top: 3.499px;
+		overflow: visible;
+	}
+	#Group_7235 {
+		position: absolute;
+		width: 221.9647px;
+		height: 38px;
+		left: 100px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Star_1 {
+		fill: #E54E35;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Star_1 {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_7228 {
+		position: absolute;
+		width: 155.764px;
+		height: 25.693px;
+		left: 66.2px;
+		top: 6.499px;
+		overflow: visible;
+	}
+	#CHART_24x {
+		position: relative;
+		top: 40px;
+		left: -120px;
+		text-align: center;
+		overflow: visible;
+		width: 1600px;
+	}
+
+	#TITLE_hk {
+		position: relative;
+		width: 679px;
+		height: 91px;
+		top: 36px;
+		margin: auto;
+		overflow: visible;
+	}
+	#Rectangle_585_hl {
+		fill: rgba(54,69,71,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_585_hl {
+		position: absolute;
+		overflow: visible;
+		width: 679px;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+	}
+	#Rating_android_apps {
+		left: 18px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 622px;
+		white-space: nowrap;
+		line-height: 43px;
+		margin-top: -8.5px;
+		text-align: left;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		color: rgba(255,226,104,1);
+	}
+	#Freevspaid {
+		position: absolute;
+		width: 660px;
+		height: 630px;
+		left: 100px;
+		top: 2170px;
+		margin-bottom: 30px;
+		overflow: visible;
+	}
+	#Background_2 {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Background_2 {
+		position: absolute;
+		overflow: visible;
+		width: 660px;
+		height: 600px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_7239 {
+		position: absolute;
+		width: 466px;
+		height: 290px;
+		top: 120px;
+		overflow: visible;
+	}
+	#CIRCLE14x {
+		display: block;
+		position: absolute;
+		width: 640px;
+		height: auto;
+		text-align: center;
+		overflow: visible;
+	}
+	#Group_7243 {
+		position: absolute;
+		width: 215.61px;
+		height: 45px;
+		left: 250.39px;
+		top: 187px;
+		overflow: visible;
+	}
+	
+	#Group_7242 {
+		position: absolute;
+		width: 535px;
+		height: 38px;
+		left: 63px;
+		top: 128px;
+		overflow: visible;
+	}
+	#Group_7240 {
+		position: absolute;
+		width: 244px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_588_h {
+		fill: orange;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_588_h {
+		position: absolute;
+		overflow: visible;
+		width: 38px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+	}
+	#Paid_Apps {
+		left: 58px;
+		top: 6px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: SF Pro Text;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(54,69,71,1);
+		letter-spacing: 0.16px;
+	}
+	#Group_7241 {
+		position: absolute;
+		width: 251px;
+		height: 38px;
+		left: 284px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_591_h {
+		fill: cyan;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_591_h {
+		position: absolute;
+		overflow: visible;
+		width: 38px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+	}
+	#Free_apps {
+		left: 51px;
+		top: 6px;
+		position: absolute;
+		overflow: visible;
+		width: 201px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: SF Pro Text;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(54,69,71,1);
+		letter-spacing: 0.16px;
+	}
+	#TITLE_3 {
+		position: absolute;
+		width: 625px;
+		height: 62px;
+		left: 18px;
+		top: 38px;
+		overflow: visible;
+	}
+	#Background_title_3 {
+		fill: rgba(54,69,71,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Background_title_3 {
+		position: absolute;
+		overflow: visible;
+		width: 625px;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+	}
+	#Free_vs_paid_apps {
+		left: 25px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 563px;
+		white-space: nowrap;
+		line-height: 43px;
+		margin-top: -8.5px;
+		text-align: left;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		color: rgba(255,226,104,1);
+	}
+	#Freevspaid_2 {
+		position: absolute;
+		width: 970px;
+		height: 630px;
+		right: 100px;
+		top: 2170px;
+		overflow: visible;
+		margin-bottom: 30px;
+	}
+	#Background_3 {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Background_3 {
+		position: absolute;
+		overflow: visible;
+		width: 970px;
+		height: 600px;
+		left: 0px;
+		top: 0px;
+	}
+	#Chart_4 {
+		position: relative;
+		width: fit-content;
+		height: fit-content;
+		top: 100px;
+		overflow: visible;
+	}
+	#bar_Chart_2 {
+		display: block;
+		position: absolute;
+		width: 1030px;
+		height: fit-content;
+		text-align: center;
+		overflow: visible;
+	}
+	#TITLE_4 {
+		position: absolute;
+		width: fit-content;
+		height: 62px;
+		left: 18px;
+		top: 38px;
+		overflow: visible;
+	}
+	#Background_title_4 {
+		fill: rgba(54,69,71,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Background_title_4 {
+		position: absolute;
+		overflow: visible;
+		width: 930px;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+	}
+	#Free_vs_paid_apps_title {
+		left: 15px;
+		top: 18px;
+		position: relative;
+		overflow: visible;
+		width: fit-content;
+		white-space: nowrap;
+		line-height: 43px;
+		margin-top: -8.5px;
+		text-align: center;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		color: rgba(255,226,104,1);
+	}
+	#Download_statics {
+		text-align: center;
+		position: absolute;
+		max-width: 1400px;
+  		margin: auto;
+		height: 780px;
+		left: 120px;
+		right: 120px;
+		top: 2800px;
+		overflow: visible;
+	}
+	#Download_chart {
+		position: absolute;
+		height: fit-content;
+		overflow: visible;
+	}
+	#Background_4 {
+		fill: rgba(236,250,252,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Background_4 {
+		position: absolute;
+		overflow: visible;
+		height: 700px;
+		width: 1400px;
+	}
+	#bar_Chart_3 {
+		mix-blend-mode: normal;
+		position: absolute;
+		width: fit-content;
+		margin: 0 auto;
+		height: fit-content;
+		left: 0px;
+		top: 20px;
+		overflow: visible;
+	}
+	#bar_Chart_3_img {
+		position: relative;
+		width: 1400px;
+		margin: 0 auto;
+		overflow: visible;
+	}
+	.bar_Chart_3_img {
+		position: relative;
+		width: 1400px;
+		margin: 0 auto;
+		top: 70px;
+		overflow: visible;
+	}
+	#TITLE_5 {
+		text-align:center;
+		position:relative;
+		margin: 0 auto;
+		height: 91px;
+		top: 29px;
+		width: 1100px;
+		overflow: visible;
+	}
+	#Background_title {
+		fill: rgba(54,69,71,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Background_title {
+		position: absolute;
+		overflow: visible;
+		width: 1100px;
+		margin: 0 auto;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+	}
+	#Download_title {
+		margin: 0 auto;
+		top: 12px;
+		position: relative;
+		overflow: visible;
+		width: fit-content;
+		white-space: nowrap;
+		line-height: 43px;
+		margin-top: -8.5px;
+		text-align: left;
+		font-family: Merrant;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		color: rgba(255,226,104,1);
+	}
